@@ -44,6 +44,20 @@ This is both **impact mission** AND **profitable business vertical**.
 
 ---
 
+## 📖 Research Registry (Phase 1, in progress)
+
+The Phase 1 knowledge-consolidation work described in the
+[ROADMAP](ROADMAP.md) now has an actual home:
+
+- [`docs/research/`](docs/research/) — bibliography (`sources.md`), a
+  capture-technology comparison (`capture-technologies.md`), and an outline
+  for the "State of Orbital Debris & Solutions 2026" report.
+- [`data/debris-registry.schema.json`](data/debris-registry.schema.json) —
+  a JSON Schema for logging tracked objects, using the same `objectType`
+  taxonomy as [`telemetry-protocol`](https://github.com/Overby-Industries/telemetry-protocol)'s
+  OTF-1 format so an object logged here and a capture event for it stay
+  consistent. Validate entries with `python tools/validate.py`.
+
 ## 🛠️ Getting our Tech & Capabilities Started
 Our debris cleanup service stands on Overby’s **zero-waste engineering mandate**:
 
