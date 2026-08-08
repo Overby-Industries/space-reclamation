@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Overby-Industries/space-reclamation/data/debris-registry.schema.json",
+  "title": "Debris Registry Entry",
+  "description": "One tracked object or debris population entry for the Phase 1 knowledge-consolidation registry (see docs/research/). objectType intentionally matches the taxonomy used by telemetry-protocol's OTF-1 'target' field, so an entry logged here and an OTF-1 capture event for the same object stay consistent.",
+  "type": "object",
+  "required": ["objectType", "source"],
+  "additionalProperties": false,
+  "properties": {
+    "catalogId": {
+      "type": "string",
+      "description": "NORAD/COSPAR catalog id, if the object is individually tracked."
+    },
+    "objectType": {
+      "type": "string",
+      "enum": ["fragment", "spent-stage", "derelict-satellite"],
+      "description": "Matches the enum used by telemetry-protocol's OTF-1 target.objectType for debris-relevant types."
+    },
+    "sizeClass_cm": {
+      "type": "string",
+      "enum": ["<1", "1-10", "10-100", ">100"],
+      "description": "Coarse size bucket, since exact size is often unknown for untracked fragments."
+    },
+    "orbitalRegime": {
+      "type": "string",
+      "enum": ["LEO", "MEO", "GEO", "cislunar"]
+    },
+    "estimatedMass_kg": {
+      "type": "number",
+      "minimum": 0
+    },
+    "captureApproach": {
+      "type": "string",
+      "description": "One of the approaches catalogued in docs/research/capture-technologies.md, if a candidate approach has been identified for this entry.",
+      "enum": ["net", "harpoon", "robotic-arm", "tether", "electrodynamic-tether", "magnetic", "containment-bag", "undetermined"]
+    },
+    "source": {
+      "type": "string",
+      "description": "Citation key or short reference into docs/research/sources.md."
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

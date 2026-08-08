@@ -1,0 +1,10 @@
+{
+  "catalogId": "NORAD-33953",
+  "objectType": "fragment",
+  "sizeClass_cm": "10-100",
+  "orbitalRegime": "LEO",
+  "estimatedMass_kg": 5.2,
+  "captureApproach": "containment-bag",
+  "source": "docs/research/sources.md#capture-technology-active-debris-removal",
+  "notes": "Placeholder entry matching the OTF-1 reclaimer-capture.json example in telemetry-protocol, to demonstrate the two schemas describing the same object consistently."
+}
