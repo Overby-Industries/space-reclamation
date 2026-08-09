@@ -17,7 +17,7 @@ We treat orbital debris not as trash, but as **resources waiting to be repurpose
 - **Return on Investment** → Transform a global problem into a long-term recurring service business model.  
 
 > Overby = The authority in **Space Cleanup as a Service (SCaaS)**.
-We will need to use PLC ladder logic or maybe JAC programming logic to automate most of the functions of the space miners / reclaimation units.
+We will need to use C++ (TwinCAT C++/TcCOM modules) or IEC 61131-3 side by side, deployed to Beckhoff's industrial PCs/controllers or PLCnext Technology (Phoenix Contact) — built for exactly this. Native C++ and C# alongside IEC 61131-3.
 
 ---
 
