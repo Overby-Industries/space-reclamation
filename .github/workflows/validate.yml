@@ -24,3 +24,14 @@ jobs:
 
       - name: Validate all example entries against the schema
         run: python tools/validate.py
+
+      - name: Check out telemetry-protocol (OTF-1 schema)
+        uses: actions/checkout@v4
+        with:
+          repository: Overby-Industries/telemetry-protocol
+          path: telemetry-protocol
+
+      - name: Test the registry <-> OTF-1 bridge
+        run: |
+          pip install pytest
+          OTF1_SCHEMA=telemetry-protocol/schema/otf-1.schema.json python -m pytest -q

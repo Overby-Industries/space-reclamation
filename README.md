@@ -110,3 +110,7 @@ git clone https://github.com/Overby-Industries/space-reclamation.git
 cd space-reclamation
 # install dependencies, run build commands
 ```
+
+## OTF-1 bridge
+
+`tools/otf1_bridge.py` turns a registry entry into an OTF-1 capture `assignment` and sums OTF-1 capture `event`s into a feedstock summary (kg by product + ODCI), so the registry, a reclaimer, and a depot ([`outpost-core`](https://github.com/Overby-Industries/outpost-core)) agree on the same numbers. Tests: `python -m pytest` (set `OTF1_SCHEMA` to a `telemetry-protocol` schema to also validate packets).
